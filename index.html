@@ -1,25 +1,190 @@
 <!DOCTYPE html>
-<form action="action_page.php" method="post">
-    <div class="imgcontainer">
-      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+<html>
+<head>
+<title>Portal Site</title>
+<meta name="description" content="Portal Site not Portal"/>
+<meta name="keywords" content="Minecraft"/>
+<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<style type="text/css" rel="stylesheet">
+body {
+    margin:100px 0;
+    padding:0;
+    line-height:1.5;
+    font-size:16px;
+    font-family:'Ubuntu', sans-serif;
+}
+a {
+    text-decoration:none;
+    color:#000;
+}
+a:hover {
+    text-decoration:underline;
+}
+.center {
+    max-width:960px;
+    margin:0 auto;
+}
+.pop {
+    transition: all .5s ease;
+    z-index:1000;
+    position:fixed;
+    background:rgba(0,0,0,0.7);
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    visibility:hidden;
+    opacity:0;
+    z-index:1000;
+}
+.pop div {
+    margin:2% auto;
+    min-height:300px;
+    max-width:800px;
+    background:#eee;
+    border:2px solid #179;
+    border-radius:15px;
+    box-shadow:4px 4px 10px #333;
+    z-index:1001;
+}
+.pop div h3 {
+    border-radius:10px 10px 0px 0px;
+    color:#fff;
+    text-shadow:2px 2px 7px #666;
+    border-bottom:2px solid #068;
+    background:linear-gradient(#068,#179);
+    margin:0;
+    padding:4px 10px;
+    text-align:center;
+}
+.pop div p {
+    font-size:14px;
+    padding:5px;
+}
+#header {
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1;
+    min-height:50px;
+    line-height:50px;
+    background:#068;
+    text-shadow:2px 2px 7px #000;
+}
+#header div {
+    text-align:center;
+    color:#fff;
+}
+#header div h1 {
+    margin:0;
+    padding:0;
+}
+#section {
+    position:relative;
+    margin:12% auto;
+    z-index:0;
+}
+#nav {
+    margin:20px;
+    text-align:center;
+}
+#nav ul {
+    display:inline-block;
+    list-style-type:none;
+    margin:0;
+    padding:0;
+}
+#nav ul li {
+    display:inline-block;
+    margin:10px;
+}
+#nav ul li a h1 {
+    height:150px;
+    width:150px;
+    background:#068;
+    color:#fff;
+    font-size:100px;
+    margin:0;
+    line-height:150px;
+    text-shadow:3px 3px 5px #111;
+    box-shadow:1px 1px 2px #aaa;
+}
+#nav ul li a {
+    transition: all .5s ease;
+    display:block;
+    text-align:center;
+    text-decoration:none;
+    font-size:24px;
+    color:#666;
+    width:150px;
+    height:175px;
+    opacity:.8;
+    text-shadow:1px 1px 2px #aaa;
+}
+#nav ul li a:hover {
+    opacity:1;
+}
+#footer {
+    position:fixed;
+    bottom:0;
+    z-index:1;
+    background:#068;
+    min-height:50px;
+    line-height:50px;
+    width:100%;
+}
+#footer div {
+    text-align:center;
+    color:#fff;
+    text-shadow:2px 2px 7px #000;
+    font-size:12px;
+}
+</style>
+</head>
+<body>
+<div onclick="popup('hide','pop')" id="pop" class="pop">
+    <div>
+        <h3>Header Content</h3>
+        <p>
+            <a href="http://www.google.com/">CLICK ME</a>
+        </p>
     </div>
-  
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-  
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-  
-      <button type="submit">Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
+</div>
+<header id="header">
+    <div class="center">
+        <h1>LOGO HERE</h1>
     </div>
-  
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
+</header>
+<section id="section" class="center">
+    <content>
+        <nav id="nav">
+            <ul>
+                <li><a href="#" onclick="popup('show','pop')" title="LINK_TITLE"><h1 class="fa">&#xf109;</h1>Portal 1</a></li>
+                <li><a href="#" title="LINK_TITLE"><h1 class="fa">&#xf109;</h1>Portal 2</a></li>
+                <li><a href="#" title="LINK_TITLE"><h1 class="fa">&#xf109;</h1>Portal 3</a></li>
+                <li><a href="#" title="LINK_TITLE"><h1 class="fa">&#xf109;</h1>Portal 4</a></li>
+            </ul>
+        </nav>
+    </content>
+</section>
+<footer id="footer">
+    <div class="center">
+        Copyright &copy; 2013, template made by ewized
     </div>
-  </form>
+</footer>
+<script type="text/javascript">
+    function popup(type,id) {
+        var element = document.getElementById(id);
+        if (type == "show") {
+            element.style.visibility="visible";
+            element.style.opacity=1;
+        }
+        else {
+            element.style.visibility="hidden";
+            element.style.opacity=0;
+        }
+    }
+</script>
+</body>
 </html>
