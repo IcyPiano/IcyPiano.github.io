@@ -1,0 +1,8 @@
+{
+    "production_rate": 1000,
+    "resource_utilization": {
+        "water": 5000,
+        "bottles": 2000,
+        "caps": 2000
+    }
+}
